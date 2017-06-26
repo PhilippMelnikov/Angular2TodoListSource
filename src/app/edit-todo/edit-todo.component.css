@@ -1,0 +1,9 @@
+.submit-add-button{
+	width: 180px;
+	// margin: 15px auto;
+	left: 50%;
+	-webkit-transform: translateX(-50%); 
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          margin-top: 15px;
+}

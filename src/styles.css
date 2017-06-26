@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body{
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+	overflow: hidden;
+}
+
+md-card {
+  position: relative;
+  max-width: 660px;
+  margin: 2em auto;
+}
+
+md-toolbar-row {
+  align-items: center;
+
+}
+md-toolbar{
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+	box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+md-sidenav{
+	min-width: 260px;
+	overflow-x: hidden;
+}
+md-nav-list{
+	min-width: 260px;
+}
+button{
+	width: 100%;
+}
+
+.main-content{
+	padding: 15px;
+}
+
+.form-card{
+	position: relative;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.my-toolbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+
+}
+
+.mat-sidenav-container[fullscreen] {
+	padding-bottom: 64px;
+}
+
+.mat-sidenav-container{
+	transform : none !important;
+}
+.mat-sidenav-content{
+	margin-top: 64px;
+	transform : none !important;
+}
+md-sidenav-container .mat-sidenav-content {
+	transform : none !important;
+}
+
+@media only screen and (max-width: 768px){
+
+	md-card{
+		max-width: 500px;
+		width: 80%;
+	}
+	.todo-text{
+		padding: 15px !important;
+	}
+
+}
+
+@media only screen and (max-width: 768px){
+
+	md-card{
+		max-width: 800px;
+		width: 90%;
+	}
+
+	.todo-text{
+		padding: 15px !important;
+	}
+
+	.form-card{
+		width: 90%;
+	}
+
+	.submit-add-button{
+		margin-top: 30px !important;
+	}
+}
+
+@media only screen and (max-width: 468px){
+
+
+	.form-card h2{
+		font-size: 22px;
+	}
+
+	.add-todo-button{
+	    right: 10px !important;
+	}
+}
+
+@media only screen and (max-width: 320px){
+
+	.form-card h2{
+		font-size: 19px;
+	}
+
+}

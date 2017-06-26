@@ -1,0 +1,35 @@
+<md-sidenav-container fullscreen [@fadeInOut]="'true'">
+	<md-toolbar color="accent" style="position: fixed; top: 0; width: 100%; z-index: 1">
+		<button md-icon-button [routerLink]="['/home/']">
+			<i class="material-icons">keyboard_backspace</i>
+		</button>
+
+		<span>todo-list</span>
+
+	</md-toolbar>
+	<div class="main-content">
+		<md-card class="form-card" [@fadeInOut]="'true'">
+			<h2>What would you like to do?</h2>
+			<form #addTodoForm="ngForm">
+			  <table class="full-width" cellspacing="0">
+				  <tr>
+				    <td><md-input-container class="full-width">
+				      <input class="full-width"  name="todo" mdInput placeholder="Your todo" [(ngModel)]="newTodo" required >
+				    </md-input-container></td>
+				  </tr>
+				  <tr>
+				  	 <td>
+				    	<md-select placeholder="Priority" [(ngModel)]="todoPriority" name="priority">
+						    <md-option *ngFor="let priority of priorities" [value]="priority">
+						      {{priority}}
+						    </md-option>
+					  </md-select>
+				    </td>
+				  </tr>
+			  </table>
+			</form>
+			<button class="submit-add-button" md-raised-button (click)="addTodo()" [routerLink]="['/home/']" [disabled]="!addTodoForm.valid" >Add</button>
+		</md-card>	
+	</div>
+</md-sidenav-container>
+
